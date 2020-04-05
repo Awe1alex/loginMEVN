@@ -1,0 +1,105 @@
+.forms {
+    &--login,
+    &--sign-up {
+        position: absolute;
+        top: 0;
+        left: 0;
+        padding: 8rem;
+        color: $text-dark;
+        width: 100%;
+        height: 100%;
+    }
+
+    &--login {
+        // display: none;
+    }
+
+    &--sign-up {
+        // display: none;
+    }
+}
+
+.form {
+    &__group:not(:last-child) {
+        font-size: 1.6rem;
+        margin-bottom: 1.5rem;
+        position: relative;
+    }
+
+    &__input {
+        font-size: inherit;
+        font-family: inherit;
+        color: inherit;
+        padding: 1.5rem 0;
+        border: none;
+        border-bottom: 1.5px solid $text-muted;
+        width: 100%;
+        display: block;
+        transition: all 0.3s;
+
+        & ~ i {
+            transition: all 0.3s;
+            color: $text-muted;
+            font-size: 1.6rem;
+            position: absolute;
+            top: 1.5rem;
+            right: 0;
+        }
+
+        &::placeholder {
+            color: $text-muted;
+            visibility: hidden;
+        }
+
+        &:focus {
+            outline: none;
+            border-bottom: 1.5px solid $primary;
+
+            &::placeholder {
+                color: $primary;
+            }
+
+            & ~ i {
+                color: $primary;
+                font-size: 1.6rem;
+                position: absolute;
+                top: 1.5rem;
+                right: 0;
+            }
+
+            // &:invalid {
+            //     border-bottom: 1.5px solid $danger;
+
+            //     & ~ i {
+            //         color: $danger;
+            //         font-size: 1.6rem;
+            //         position: absolute;
+            //         top: 1.5rem;
+            //         right: 0;
+            //     }
+            // }
+        }
+    }
+
+    &__label {
+        position: absolute;
+        top: 1.2rem;
+        left: 0;
+        color: $text-muted;
+        visibility: hidden;
+        font-weight: 400;
+
+        &::after {
+            content: '*';
+            color: $danger;
+        }
+    }
+
+    &__input:placeholder-shown ~ &__label {
+        visibility: visible;
+    }
+
+    &__input:focus ~ &__label {
+        color: $primary;
+    }
+}

@@ -7,8 +7,13 @@ body {
     color: $text-dark;
 }
 
-.heading-secondary {
+.heading--secondary {
     font-size: 3rem;
     font-weight: 300;
     letter-spacing: 1px;
+}
+
+.paragraph--large {
+    font-size: 1.8rem;
+    margin-bottom: 2.5rem;
 }

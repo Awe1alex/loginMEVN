@@ -1,0 +1,42 @@
+.section-login {
+    background-image: url(../assets/background.jpg);
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    color: $text-light;
+
+    & .row {
+        position: relative;
+        background: rgba($secondary, 0.8);
+        padding: 8rem;
+    }
+}
+
+.container__form {
+    transition: all 0.5s ease-in-out;
+    min-height: calc(100% + 4rem);
+    width: calc(50% - 4rem);
+    background-color: white;
+    position: absolute;
+    transition: all 1s;
+    top: -2rem;
+    left: 2rem;
+
+    &--sign-up {
+        left: calc(50% + 2rem);
+    }
+}
+
+.logo {
+    &__container {
+        position: absolute;
+        top: 8rem;
+        right: 8rem;
+    }
+
+    &__img {
+        height: 3.5rem;
+    }
+}

@@ -16,17 +16,17 @@
 
     &:hover {
         transform: translateY(-2px);
-        box-shadow: 0 1.5rem 4rem rgba($color: #000000, $alpha: 0.2);
+        box-shadow: 0 1.5rem 4rem rgba($color: $black, $alpha: 0.2);
     }
 
     &:active,
     &:focus {
         outline: none;
         transform: translateY(-1px);
-        box-shadow: 0 1rem 2rem rgba($color: #000000, $alpha: 0.2);
+        box-shadow: 0 1rem 2rem rgba($color: $black, $alpha: 0.2);
     }
 
-    &-primary {
+    &--primary {
         background-color: $primary;
         color: $text-light;
 
@@ -37,6 +37,21 @@
         &:active,
         &:focus {
             background-color: darken($primary, 5%);
+        }
+    }
+
+    &--warning {
+        background-color: $warning;
+        color: $text-light;
+        margin-top: 1.5rem;
+
+        &:hover {
+            background-color: lighten($warning, 5%);
+        }
+
+        &:active,
+        &:focus {
+            background-color: darken($warning, 5%);
         }
     }
 }

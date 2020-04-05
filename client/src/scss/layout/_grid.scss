@@ -2,17 +2,15 @@
     max-width: $grid-width;
     margin: 0 auto;
 
-    &::after {
-        content: '';
-        display: table;
-        clear: both;
-    }
+    display: flex;
 
     [class^='col-'] {
-        float: left;
-
         &:not(:last-child) {
-            margin-right: $gutter-horizontal;
+            padding-right: 8rem;
+        }
+
+        &:not(:first-child) {
+            padding-left: 8rem;
         }
     }
 
