@@ -37,6 +37,10 @@ open another terminal window
 
 ## Functionality:
 
+test user is `test@test.com / testtest`
+
+Database connection will be open for few days for All IPs and can be viewed in Compass, also json user collection will be attached in email.
+
 There are unused mutations in vuex store, i dont count them as junk code, they can be used in future
 
 Jwt authorization token does not expires
