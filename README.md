@@ -34,3 +34,11 @@ open another terminal window
 #### to build production backend:
 
 `npm start`
+
+## Functionality:
+
+There is unused mutations in vuex store, i dont count them as junk code, they can be used in future
+
+Jwt authorization token does not expires
+
+Edit profile form simply override logged user data in database
