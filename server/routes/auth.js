@@ -1,17 +1,15 @@
 const express = require('express')
 const { body } = require('express-validator')
-const bcrypt = require('bcryptjs')
 
 const User = require('../models/user')
-
-const userController = require('../controllers/user')
-const authorized = require('../middleware/authorized')
+const authController = require('../controllers/auth')
 
 const router = express.Router()
 
+router.post('/login', authController.postLogin)
+
 router.post(
-    '/edit-profile',
-    authorized,
+    '/signup',
     [
         body('name').trim().not().isEmpty(),
         body('email')
@@ -27,7 +25,7 @@ router.post(
             .normalizeEmail(),
         body('password').trim().isLength({ min: 8 }),
     ],
-    userController.postEditProfile
+    authController.postSignUp
 )
 
 module.exports = router

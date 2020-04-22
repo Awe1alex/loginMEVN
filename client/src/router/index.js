@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import Login from '../views/Login.vue'
+import Login from '@/views/Login.vue'
 
 Vue.use(VueRouter)
 
@@ -11,10 +11,16 @@ const routes = [
         component: Login,
     },
     {
-        path: '/edit-profile',
-        name: 'EditProfile',
+        path: '/profile',
+        name: 'Profile',
         component: () =>
-            import(/* webpackChunkName: "about" */ '../views/EditProfile.vue'),
+            import(/* webpackChunkName: "about" */ '../views/Profile.vue'),
+    },
+    {
+        path: '*',
+        redirect: {
+            name: 'Login',
+        },
     },
 ]
 

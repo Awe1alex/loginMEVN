@@ -9,17 +9,35 @@
         width: 100%;
         height: 100%;
     }
-
-    &--login {
-        // display: none;
-    }
-
-    &--sign-up {
-        // display: none;
-    }
 }
 
 .form {
+    &__error {
+        width: 100%;
+        color: $danger;
+        font-size: 1.4rem;
+        line-height: 1;
+        padding: 0.5rem;
+        border: 1px solid $danger;
+        border-radius: 6px;
+        text-align: center;
+        background-color: rgba($danger, $alpha: 0.05);
+        transition: transform 0.4s ease-in-out;
+    }
+
+    &__success {
+        width: 100%;
+        color: $primary;
+        font-size: 1.4rem;
+        line-height: 1;
+        padding: 0.5rem;
+        border: 1px solid $primary;
+        border-radius: 6px;
+        text-align: center;
+        background-color: rgba($primary, $alpha: 0.05);
+        transition: transform 0.4s ease-in-out;
+    }
+
     &__group:not(:last-child) {
         font-size: 1.6rem;
         margin-bottom: 1.5rem;
@@ -53,31 +71,30 @@
 
         &:focus {
             outline: none;
-            border-bottom: 1.5px solid $primary;
+            border-bottom: 1.5px solid $primary !important;
 
             &::placeholder {
                 color: $primary;
             }
 
             & ~ i {
-                color: $primary;
+                color: $primary !important;
                 font-size: 1.6rem;
                 position: absolute;
                 top: 1.5rem;
                 right: 0;
             }
+        }
+        &--invalid {
+            border-bottom: 1.5px solid $danger;
 
-            // &:invalid {
-            //     border-bottom: 1.5px solid $danger;
-
-            //     & ~ i {
-            //         color: $danger;
-            //         font-size: 1.6rem;
-            //         position: absolute;
-            //         top: 1.5rem;
-            //         right: 0;
-            //     }
-            // }
+            & ~ i {
+                color: $danger;
+                font-size: 1.6rem;
+                position: absolute;
+                top: 1.5rem;
+                right: 0;
+            }
         }
     }
 

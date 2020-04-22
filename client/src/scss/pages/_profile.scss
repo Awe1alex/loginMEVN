@@ -1,0 +1,34 @@
+.section-profile {
+    background-image: url(../assets/background.jpg);
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    color: $text-light;
+
+    & .row {
+        position: relative;
+        background: rgba($secondary, 0.8);
+        padding: 8rem;
+    }
+}
+
+.avatar {
+    &__container {
+        background-color: $white;
+        border-radius: 6px;
+        overflow: hidden;
+        width: 8rem;
+        height: 8rem;
+        position: relative;
+    }
+
+    &__img {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 5rem;
+    }
+}
