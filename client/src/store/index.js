@@ -10,16 +10,11 @@ Vue.use(Vuex)
 
 export default new Vuex.Store({
     state: {
-        authorized: false,
-        userId: null,
         loginFormType: true,
     },
     mutations: {
         loginSuccess(state, resData) {
-            state.authorized = true
-            state.userId = resData.userId
             localStorage.setItem('token', resData.token)
-            localStorage.setItem('userId', resData.userId)
             router.replace('/profile')
         },
         loginFail(state, err) {},
@@ -27,17 +22,12 @@ export default new Vuex.Store({
             state.loginFormType = true
         },
         signupFail(state, err) {},
-        editProfileSuccess(state, resData) {
-            console.log(resData)
-        },
-        editProfileFail(state, err) {
-            console.log(err)
-        },
+        editProfileSuccess(state, resData) {},
+        editProfileFail(state, err) {},
         signout(state) {
             state.authorized = false
             state.userId = null
             localStorage.removeItem('token')
-            localStorage.removeItem('userId')
             router.replace('/')
         },
         toLogin(state) {

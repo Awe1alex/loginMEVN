@@ -1,5 +1,5 @@
 <template>
-    <div class="login__page">
+    <div class="profile__page">
         <section class="section-profile">
             <div class="row">
                 <div class="col-1-of-2">
@@ -28,7 +28,6 @@ export default {
         AppEditProfileForm
     },
     beforeRouteEnter(to, from, next) {
-        console.log("hehexd");
         if (localStorage.getItem("token") == null) {
             next({
                 name: "Login"
