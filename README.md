@@ -37,7 +37,7 @@ open another terminal window
 
 ## Functionality:
 
-There is unused mutations in vuex store, i dont count them as junk code, they can be used in future
+There are unused mutations in vuex store, i dont count them as junk code, they can be used in future
 
 Jwt authorization token does not expires
 
