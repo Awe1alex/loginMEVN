@@ -4,6 +4,10 @@
     display: inline-block;
     margin: 2rem 0;
 
+    @include respond(tab-port) {
+        margin: 1rem 0;
+    }
+
     &--blue {
         border-bottom: 2px solid $primary;
     }

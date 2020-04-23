@@ -8,6 +8,10 @@
         color: $text-dark;
         width: 100%;
         height: 100%;
+
+        @include respond(tab-port) {
+            padding: 3rem;
+        }
     }
 }
 
@@ -42,6 +46,10 @@
         font-size: 1.6rem;
         margin-bottom: 1.5rem;
         position: relative;
+
+        @include respond(tab-port) {
+            margin-bottom: 0.2rem;
+        }
     }
 
     &__input {

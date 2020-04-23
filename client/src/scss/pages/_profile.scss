@@ -11,24 +11,9 @@
         position: relative;
         background: rgba($secondary, 0.8);
         padding: 8rem;
-    }
-}
 
-.avatar {
-    &__container {
-        background-color: $white;
-        border-radius: 6px;
-        overflow: hidden;
-        width: 8rem;
-        height: 8rem;
-        position: relative;
-    }
-
-    &__img {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        width: 5rem;
+        @include respond(tab-port) {
+            padding: 4rem 3rem;
+        }
     }
 }

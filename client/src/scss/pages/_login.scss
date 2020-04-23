@@ -11,12 +11,16 @@
         position: relative;
         background: rgba($secondary, 0.8);
         padding: 8rem;
+
+        @include respond(tab-port) {
+            padding: 4rem 3rem;
+        }
     }
 }
 
 .container__form {
     transition: all 0.5s ease-in-out;
-    min-height: calc(100% + 4rem);
+    height: calc(100% + 4rem);
     width: calc(50% - 4rem);
     background-color: white;
     position: absolute;
@@ -24,8 +28,20 @@
     top: -2rem;
     left: 2rem;
 
+    @include respond(tab-port) {
+        left: -2rem;
+        top: 2rem;
+        width: calc(100% + 4rem);
+        height: calc(50% - 4rem);
+    }
+
     &--to-right {
         left: calc(50% + 2rem);
+
+        @include respond(tab-port) {
+            left: -2rem;
+            top: calc(50% + 2rem);
+        }
     }
 }
 
@@ -34,6 +50,11 @@
         position: absolute;
         top: 8rem;
         right: 8rem;
+
+        @include respond(tab-port) {
+            top: 3rem;
+            right: 3rem;
+        }
     }
 
     &__img {
