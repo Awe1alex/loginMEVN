@@ -14,6 +14,8 @@ to run project in development mode you need build frontend and backend separetly
 
 `npm run serve`
 
+will be available on localhost:8080
+
 #### Backend: 
 
 open another terminal window
@@ -24,6 +26,7 @@ open another terminal window
 
 `npm run dev`
 
+will be available on localhost:3000
 
 #### To build production frontend:
 
