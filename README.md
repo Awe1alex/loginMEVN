@@ -2,6 +2,7 @@
  
 This is Test login page project, it is build using Vue, Node.js, Express.js and MongoDB
 
+desing was made by &copy; Magebit
 
 ## Setup
 to run project in development mode you need build frontend and backend separetly
