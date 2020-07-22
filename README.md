@@ -43,7 +43,7 @@ will be available on localhost:3000
 
 test user is `test@test.com / testtest`
 
-Database connection will be open for few days for All IPs and can be viewed in Compass, also json user collection will be attached in email.
+Database is currently offline pm me if you need one to test, or make your own.
 
 There are unused mutations in vuex store, i dont count them as junk code, they can be used in future
 
